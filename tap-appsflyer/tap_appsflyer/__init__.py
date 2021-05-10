@@ -679,10 +679,9 @@ def sync_organic_in_app_events():
         to_datetime = get_stop(from_datetime, stop_time, 10)
 
 STREAMS = [
-    # TODO uncomment
-    #Stream("installs", sync_installs),
-    #Stream("in_app_events", sync_in_app_events),
-    #Stream("organic_installs", sync_organic_installs)
+    Stream("installs", sync_installs),
+    Stream("in_app_events", sync_in_app_events),
+    Stream("organic_installs", sync_organic_installs)
     Stream("organic_in_app_events", sync_organic_in_app_events)
 ]
 
