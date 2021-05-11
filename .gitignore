@@ -1,3 +1,4 @@
 env
 config.json
 service-account.json
+state.json
