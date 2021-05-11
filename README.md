@@ -12,12 +12,13 @@
 	- "project_id": "your-gcp-project",
   - "dataset_id": "appsflyer",
   - "validate_records": true
+- Create service-account.json file for your GCP credentials
 - tap-appsflyer -c config.json | target-bigquery -c config.json
 
 ## Cron
 Run "crontab -e"
 Add this line:
-`30 23 * * * source /python-binaries; cd /project-folder; tap-appsflyer -c config.json | target-bigquery --c config.json`
+`30 23 * * * source /python-binaries; cd /project-folder; GOOGLE_APPLICATION_CREDENTIALS=/service-account.json tap-appsflyer -c config.json | target-bigquery --c config.json`
 
 ## Changes
 - Clone https://github.com/TG-17/tap-appsflyer fork
