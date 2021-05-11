@@ -13,6 +13,7 @@
   - "dataset_id": "appsflyer",
   - "validate_records": true
 - Create service-account.json file for your GCP credentials
+- Create state.json with empty object {}
 - `export GOOGLE_APPLICATION_CREDENTIALS=/service-account.json; tap-appsflyer -s state.json -c config.json | target-bigquery -c config.json >> state.json; tail -1 state.json > state.json.tmp && mv state.json.tmp state.json`
 
 ## Cron
