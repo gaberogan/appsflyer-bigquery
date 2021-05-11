@@ -22,7 +22,7 @@ Add this line:
 
 ## Changes
 - Clone https://github.com/TG-17/tap-appsflyer fork
-- Clone https://github.com/singer-io/target-stitch
+- Clone https://github.com/singer-io/target-bigquery
 - Change tap-appsflyer/setup.py to match singer-python v5.8.0 and match singer-python's "backoff" package, currently 1.8.0
 - Apply all the changes from https://github.com/singer-io/tap-appsflyer/pull/15/files
 - Apply all the changes from https://github.com/singer-io/tap-appsflyer/pull/17/files
