@@ -4,6 +4,7 @@
 - source env/bin/activate
 - Run "brew unlink c-ares" if on mac (prevents https://github.com/saghul/pycares/issues/136)
 - Run "apt install python3-pip" if on linux
+- Run "pip install grpcio" if you don't have it. If your pip < 19 it will take 5 mins to build.
 - pip install -e tap-appsflyer
 - pip install -e target-bigquery
 - Create config.json with:
