@@ -20,7 +20,7 @@
 ## Cron
 Run "crontab -e"
 Add this line:
-`30 23 * * * source /python-binaries; cd /project-folder; {SEE ABOVE COMMAND}`
+`30 23 * * * script -c "source /python-binaries; cd /project-folder; {SEE ABOVE COMMAND}" -f /project-folder/cron.log`
 
 ## Changes
 - Clone https://github.com/TG-17/tap-appsflyer fork
