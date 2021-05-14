@@ -19,8 +19,10 @@
 
 ## Cron
 Run "crontab -e"
+Add this line at the top:
+`SHELL=/bin/bash`
 Add this line:
-`30 23 * * * script -c "source /python-binaries; cd /project-folder; {SEE ABOVE COMMAND}" -f /project-folder/cron.log`
+`30 23 * * * script -c "cd /project-folder; export GOOGLE_APPLICATION_CREDENTIALS=/service-account.json; /python-binaries/tap-appsflyer -s state.json -c config.json | /python-binaries/target-bigquery -c config.json >> state.json; tail -1 state.json > state.json.tmp && mv state.json.tmp state.json" -f /project-folder/cron.log`
 
 ## Changes
 - Clone https://github.com/TG-17/tap-appsflyer fork
