@@ -8,7 +8,7 @@
 - pip install -e tap-appsflyer
 - pip install -e target-bigquery
 - Create config.json with:
-	- app_id = AppsFlyer app id (ie com.rotoql.betql)
+	- app_id = AppsFlyer app id (ie com.foo.bar)
 	- api_token = AppsFlyer api token v1
 	- "project_id": "your-gcp-project",
   - "dataset_id": "appsflyer",
